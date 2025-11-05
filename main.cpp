@@ -1,25 +1,23 @@
 #include <iostream>
-#include <cctype>
+
 using namespace std;
 
-int main() {
+int main()
+{
     string input;
-    cout << "Enter input: ";
+    cout << "Enter an input:";
     cin >> input;
 
-    bool isNumeric = true;
-
-    for (char c : input) {
-        if (!isdigit(c)) { // check if any character is not a digit
-            isNumeric = false;
-            break;
-        }
-    }
-
-    if (isNumeric)
-        cout << "Numeric constant" << endl;
-    else
-        cout << "Not numeric" << endl;
-
+    if(!(isalpha(input [0]) || input [0] =='_')){
+            cout << "not a valid identifier." << endl;
     return 0;
+}
+for (int i = 1; i <input.length();i++){
+        if(!(munni(input[i]) || input[i] =='_' )){
+                cout<<"Not a valid identifier."<<endl;
+        return 0;
+        }
+}
+cout<< "valid identifier"<< endl;
+return 0;
 }
